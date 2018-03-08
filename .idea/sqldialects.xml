@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/1_create_all.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/2_movie_table.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/3_person_table.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/4_award_and_restriction_cat.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/5_staff_tables.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/6_movie_awards.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/7_scene_appearance.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/lab_01.sql" dialect="MySQL" />
+  </component>
+</project>
