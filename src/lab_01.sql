@@ -1,2 +1,44 @@
 SELECT * FROM MOVIE
 WHERE production_year > 1990;
+
+SELECT * FROM INFORMATION_SCHEMA.TABLES;
+
+SELECT TABLE_NAME
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_SCHEMA = 'stu_mshe666_COMPSCI_751_C_S1_2018';
+
+DESCRIBE MOVIE;
+
+-- ex01
+SELECT * FROM MOVIE;
+
+-- ex02
+SELECT * FROM MOVIE
+WHERE country = 'USA';
+
+-- ex03
+SELECT DISTINCT PERSON.id, first_name, last_name, year_born FROM PERSON
+  RIGHT OUTER JOIN DIRECTOR
+ON PERSON.id = DIRECTOR.id
+WHERE 2018 - PERSON.year_born >= 45;
+
+-- ex04
+SELECT DISTINCT DIRECTOR.id, PERSON.first_name, PERSON.last_name FROM DIRECTOR
+LEFT JOIN PERSON
+  ON PERSON.id = DIRECTOR.id
+LEFT JOIN MOVIE
+  ON MOVIE.title = DIRECTOR.title AND MOVIE.production_year = DIRECTOR.production_year
+WHERE 2018 - PERSON.year_born >= 45 AND MOVIE.country = 'New Zealand';
+
+-- ex05
+SELECT MOVIE.title, MOVIE.production_year, country, run_time, major_genre, DIRECTOR.id, WRITER.id FROM MOVIE
+LEFT JOIN DIRECTOR
+  ON MOVIE.title = DIRECTOR.title AND MOVIE.production_year = DIRECTOR.production_year
+LEFT JOIN WRITER
+  ON MOVIE.title = WRITER.title AND MOVIE.production_year = WRITER.production_year
+WHERE DIRECTOR.id = WRITER.id
+
+
+
+
+
